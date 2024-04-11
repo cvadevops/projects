@@ -25,13 +25,13 @@ echo "JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64/" >> /etc/environment
 cd /opt/
 
 # Download Apache Tomcat - Application
-sudo wget https://downloads.apache.org/tomcat/tomcat-8/v8.5.87/bin/apache-tomcat-8.5.87.tar.gz
+sudo wget https://downloads.apache.org/tomcat/tomcat-8/v8.5.100/bin/apache-tomcat-8.5.100.tar.gz
 
 # Extract the Tomcat File
-sudo tar xvzf apache-tomcat-8.5.87.tar.gz
+sudo tar xvzf apache-tomcat-8.5.100.tar.gz
 
 # Rename the Tomcat Folder
-sudo mv apache-tomcat-8.5.87 tomcat
+sudo mv apache-tomcat-8.5.100.tar.gz tomcat
 
 # Go Inside the Tomcat Folder
 cd /opt/tomcat/
