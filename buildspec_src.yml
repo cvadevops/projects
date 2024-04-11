@@ -6,11 +6,16 @@ phases:
       java: corretto11
   pre_build:
     commands:
-      - echo Nothing to do in the pre_build phase...
+      #- echo Nothing to do in the pre_build phase...
+      - echo Publish Artifact to JFROG based on the User Input in POM.xml file
   build:
     commands:
       - echo Build started on `date`
-      - mvn install
+      - pwd
+      - ls -lrt $CODEBUILD_SRC_DIR/settings.xml
+      - cp -pvr $CODEBUILD_SRC_DIR/settings.xml ~/.m2/settings.xml
+      - echo Publish Artifact to JFROG based on the User Input in POM.xml file
+      - mvn deploy
   post_build:
     commands:
       - echo Build completed on `date`
