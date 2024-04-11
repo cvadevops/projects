@@ -21,7 +21,7 @@ resource "aws_instance" "jenkins" {
   subnet_id              = var.subnet_id
   vpc_security_group_ids = ["sg-0dc7bb6127d56baff"]
   iam_instance_profile   = var.iam_instance_profile
-  user_data              = file("C:/Users/shivanand/repo_vcs/project1/project/jenkins.sh")
+  user_data              = file("C:/Users/shivanand/repo_vcs/projects/jenkins.sh")
 
   tags = {
     Name      = "jenkins"
@@ -38,7 +38,7 @@ resource "aws_instance" "tomcat" {
   subnet_id              = var.subnet_id
   vpc_security_group_ids = ["sg-0dc7bb6127d56baff"]
   iam_instance_profile   = var.iam_instance_profile
-  user_data              = file("C:/Users/shivanand/repo_vcs/project1/project/tomcat.sh")
+  user_data              = file("C:/Users/shivanand/repo_vcs/projects/tomcat.sh")
 
   tags = {
     Name      = "tomcat"
@@ -54,7 +54,7 @@ resource "aws_instance" "jfrog" {
   subnet_id              = "subnet-0791b04c3a38e251a"
   vpc_security_group_ids = ["sg-0dc7bb6127d56baff"]
   iam_instance_profile   = "8amSSMEC2"
-  user_data              = file("C:/Users/shivanand/repo_vcs/project1/project/jfrog.sh")
+  user_data              = file("C:/Users/shivanand/repo_vcs/projects/jfrog.sh")
 
   tags = {
     Name      = "jfrog"
