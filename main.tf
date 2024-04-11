@@ -30,7 +30,7 @@ resource "aws_instance" "jenkins" {
 }
 
 
-    # Resource - aws -ec2 -tomcat
+# Resource - aws -ec2 -tomcat
 resource "aws_instance" "tomcat" {
   ami                    = var.ami
   instance_type          = var.instance_type
@@ -46,7 +46,7 @@ resource "aws_instance" "tomcat" {
   }
 }
 
-    # Resource - aws -ec2 -jfrog
+# Resource - aws -ec2 -jfrog
 resource "aws_instance" "jfrog" {
   ami                    = "ami-080e1f13689e07408"
   instance_type          = "t2.medium"
